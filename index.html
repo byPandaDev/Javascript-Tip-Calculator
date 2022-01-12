@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="header">
+            <div class="title">
+                <h1>Tip Calculator</h1>
+            </div>
+
+            <div class="bill">
+                <span class="input-group-addon">$</span>
+                <input type="number" id="billAmountInput" step='0.01' value="5.00" placeholder="Total Bill" onchange="calcBill()">
+            </div>
+
+            <div class="tip">
+                <label for="">Tip:</label>
+                <input type="range" id="tipAmountInput" onchange="calcBill()">
+                <span class="input-group-addon" id="tipPercent">50%</span>
+            </div>
+        </div>
+        <div class="results">
+            <div class="title">
+                <h2>Results</h2>
+            </div>
+            <div class="result">
+                <span class="input-group-addon">Tip amount</span>
+                <input type="number" id="tipAmout" step='0.01' value="0.00" disabled>
+            </div>
+            <div class="result">
+                <span class="input-group-addon">Bill with Tip</span>
+                <input type="number" id="billAmount" step='0.01' value="0.00" disabled>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with &hearts; by <span><a href="https://codewithpanda.com">PandaDev</a></span></p>
+        <a href="https://github.com/xPandaDev/Javascript-Tip-Calculator" target="_blank">Source Code</a>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
